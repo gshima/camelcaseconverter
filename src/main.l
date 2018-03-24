@@ -13,7 +13,7 @@ char output[50];
 printf("ERRO");
 }
 
-([A-Z]+[a-z]+)+([_][a-z]+)+ {
+.*([A-Z]+[a-z]+)+([_][a-z]+)+.* {
 printf("ERRO");
 }
 
