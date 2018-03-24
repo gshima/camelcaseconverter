@@ -11,7 +11,7 @@ SRCS := $(shell find $(DIR) -name '*.c')
 OBJS = $(SRCS:.c=.o)
 LEX = lex
 LEXSRCS := $(shell find $(DIR) -name '*.l')
-LEXFLAGS = -lfl
+LEXFLAGS = -ll
 
 # Macros para teste
 BASH = sh
