@@ -9,6 +9,13 @@ char output[50];
 
 %}
 %%
+.*([a-z]+[_])+([a-z]+)([A-Z]+[a-z]+)+.* {
+printf("ERRO");
+}
+
+([A-Z]+[a-z]+)+([_][a-z]+)+ {
+printf("ERRO");
+}
 
 [A-Z]+[a-z]+([A-Z]+[a-z]+)+[^_] { //encontra cadeias de CamelCase
   //printf("Encontrei a cadeia: %s\n", yytext);
@@ -24,14 +31,6 @@ char output[50];
   //printf("Converti a string: %s", output);
   printf("%s", output);
   clear_string(output);
-}
-
-([A-Z]+[a-z]+)+([_][a-z]+)+ {
-printf("ERRO");
-}
-
-([a-z]+[_])+([a-z]+)([A-Z]+[a-z]+)+ {
-printf("ERRO");
 }
 
 %%
